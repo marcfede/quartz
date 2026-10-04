@@ -1,7 +1,18 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
   pageTitle: "Marc Fede Space"
+  pageTitleSuffix: ""
+  enableSPA: true
+  enablePopovers: true
+  analytics: null
+  locale: en-US
   baseUrl: "marcfede.github.io/quartz"
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
   theme:
+    fontOrigin: googleFonts
     cdnCaching: true
     typography:
       header: "Schibsted Grotesk"
@@ -26,3 +37,18 @@ configuration:
         secondary: "#7b2cbf"
         tertiary: "#9d4edd"
         highlight: "rgba(143, 157, 172, 0.15)"
+plugins:
+  transformers:
+    - name: FrontMatter
+    - name: GitHubFlavoredMarkdown
+    - name: ObsidianFlavoredMarkdown
+    - name: SyntaxHighlighting
+    - name: MarkdownLinks
+  filters:
+    - name: RemoveDrafts
+  emitters:
+    - name: Aliases
+    - name: FolderPage
+    - name: TagPage
+    - name: ContentIndex
+    - name: ContentPage
