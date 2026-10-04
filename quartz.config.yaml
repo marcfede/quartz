@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: "Il mio Sito Quartz"
+  baseUrl: "marcfede.github.io/quartz"
+  locale: en-US
